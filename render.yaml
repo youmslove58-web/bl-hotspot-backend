@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: bl-hotspot-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MIKROTIK_HOST
+        value: 192.168.88.1
+      - key: MIKROTIK_USER
+        value: youms
+      - key: MIKROTIK_PASSWORD
+        sync: false
+      - key: MIKROTIK_PORT
+        value: 8728
+      - key: HOTSPOT_NAME
+        value: BL-Hotspot
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASS
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+      - key: MM_ORANGE_RECIPIENT
+        value: 0320000000
+      - key: MM_MVOLA_RECIPIENT
+        value: 0340000000
+      - key: MM_AIRTEL_RECIPIENT
+        value: 0330000000
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: AUTO_VALIDATE
+        value: "true"
+      - key: SYNC_TOKEN
+        sync: false

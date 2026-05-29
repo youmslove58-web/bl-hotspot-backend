@@ -1,0 +1,22 @@
+{
+  "name": "bl-hotspot-backend",
+  "version": "4.0.0",
+  "description": "B&L info service - Hotspot v4 Backend pour Render (Node.js + RouterOS API + Telegram + Gemini)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-routeros": "^1.6.4",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.0",
+    "node-telegram-bot-api": "^0.64.0",
+    "@google/generative-ai": "^0.15.0"
+  }
+}
